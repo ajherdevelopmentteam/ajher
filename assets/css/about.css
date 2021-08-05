@@ -1,0 +1,81 @@
+
+
+.about{
+    margin-top: 90px;    
+    font-size:50px; 
+    font-family:sans-serif; 
+    font-weight: bold;
+    
+}
+
+.kami{
+    clear: left;
+    font-weight: bold;
+    font-size: 25px;
+    width: 600px;
+    margin-bottom: 500px;
+}
+.teamwork{
+    margin-top: 80px;
+    width: 575.17px;
+    height: 368.36px;
+}
+.sosmed{
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+.foto{
+    float: left;
+    margin-bottom: 50px;
+    height: 400px;
+    width: 600px;
+    
+}
+.col{
+    margin-left: 10px;
+}
+h2{
+    /* float: left; */
+    /* clear: right; */
+    margin-left: 30px;
+    margin-top: 80px;
+}
+p{
+    width: 500px;
+    float: inline-end;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.peka{
+    float: left;
+    margin-top: 100px ;
+    font-size: 50px;
+    font-family:monospace;
+    font-weight: bold;
+    width: 600px;
+}
+.email{
+    float: right;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    height: 400px;
+    width: 600px;
+}
+.btn-lg.round {
+	border-radius: 24px;
+}
+
+
+.text-garis {
+    border-bottom: 2px solid #00DDf3;
+    width: fit-content;
+}
+.tebal-sedang {
+    font-weight: bold;
+}
+.footer-top {
+    background-color: #1E3069;
+    color: #fff;
+}
