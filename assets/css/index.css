@@ -1,0 +1,26 @@
+body {
+    background-color: #f5f7fa;
+}
+.jomb {
+    padding-top: 6rem;
+}
+.warna-btn {
+    background-color: #1e3069;
+}
+.text-garis {
+    border-bottom: 2px solid #00ddf3;
+    width: fit-content;
+}
+.tebal-sedang {
+    font-weight: bold;
+}
+.footer-top {
+    background-color: #1e3069;
+    color: #fff;
+}
+.uk-text {
+    font-size: 2vw;
+}
+.uk-text-desc {
+    font-size: 1vw;
+}
