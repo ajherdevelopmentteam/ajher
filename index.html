@@ -11,14 +11,36 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
+        <!-- icon -->
+        <link rel="icon" href="assets/img/logo/Logo ajher.png" />
+
         <!-- css -->
-        <link rel="stylesheet" href="assets/css/index.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
 
         <title>AJHER</title>
     </head>
     <body>
+        <!-- preloading -->
+        <div class="preloading">
+            <div class="container">
+                <div class="row justify-content-center mt-4">
+                    <div class="col-md-2">
+                        <img src="assets/img/logo/Logo ajher.png" width="100%" alt="" />
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- preloading -->
+
         <!-- Awal Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="assets/img/logo/Logo.png" alt="" width="50" class="ps-3" />
@@ -38,7 +60,7 @@
                         <li class="nav-item pe-4">
                             <a class="nav-link tebal-sedang" href="#contact">CONTACT</a>
                         </li>
-                        <button type="submit" class="btn shadow-sm text-light warna-btn">Login</button>
+                        <button type="submit" class="btn shadow-sm text-light warna-btn">Login or Sign up</button>
                     </ul>
                 </div>
             </div>
@@ -46,13 +68,30 @@
         <!-- Akhir Navbar -->
 
         <!-- Awal Jomb -->
-        <section class="mb-5 jomb">
+        <section id="home">
             <div class="container-md">
-                <div class="row">
-                    <div class="col-6">
-                        <p>sayang aku tuh</p>
+                <div class="row mt-4 mb-4">
+                    <div class="col-md-6">
+                        <div class="caption-box">
+                            <div class="caption-title mb-4">
+                                <h3>
+                                    MAKE YOUR <span class="text-highlight">LEARNING</span>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PROCESS
+                                </h3>
+                                <h3>BE <span class="text-highlight">EASIER</span></h3>
+                            </div>
+                            <div class="caption-full mb-4">
+                                <div class="wrapper">
+                                    <p>kami membantu anda <span class="text-animation"></span></p>
+                                    <!-- <span id="cursor">|</span> -->
+                                </div>
+                            </div>
+                            <div class="learn-more">
+                                <a href="#" class="btn btn-outline-info">learn more</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6">
                         <img src="assets/img/vektor/reading.svg" width="100%" alt="" class="rounded float-end" />
                     </div>
                 </div>
@@ -60,7 +99,7 @@
         </section>
         <!-- Akhir Jomb -->
 
-        <!-- Awal About -->
+        <!-- Awal Features -->
         <section id="about">
             <div class="container-fluid mt-5">
                 <div class="container-md">
@@ -102,23 +141,93 @@
         <section>
             <div class="container-fluid mt-5">
                 <div class="container-md">
-                    <h6 class="text-info">FEATURES</h6>
-                    <h4 class="fs-1">ALL OF OUR USEFULL FEATURES</h4>
+                    <div class="row">
+                        <div class="col-auto">
+                            <h6 class="text-info">ACTIVITY</h6>
+                            <h4 class="fs-1">EVERYTHING AS SIMPLE AS POSSIBLE</h4>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 activity-buttons">
+                            <button class="btn activity-button btn-info btn-sm activity-button-active" data-tab="1">Login or Sign up</button>
+                            <button class="btn activity-button btn-danger btn-sm" data-tab="2">Create or find class</button>
+                            <button class="btn activity-button btn-warning btn-sm" data-tab="3">Enjoy your learning process</button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center activity-content activity-content--1">
+                        <div class="col-md-8 activity-content-text">
+                            <p>
+                                Lakukakan login saat pertama kali masuk ke aplikasi untuk bisa masuk ke menu dashboard. Jika belum memiliki akun, lakukan sign up terlebih dahulu baru login menggunakan akun yang sudah dibuat tadi. Login
+                                sendiri merupakan suatu proses identifikasi terhadap pengguna, yaitu untuk mengetahui pengguna mana yang sedang mengunjungi aplikasi dan data mana yang harus ditampilkan nantinya. Sementara itu, Sign up
+                                merupakan proses registrasi bagi pengguna, proses registrasi dilakukan bagi pengguna yang baru pertama menggunakan aplikasi. Setelah melakukan registrasi atau sign up, pengguna bisa melakukan login.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center activity-content activity-content--2 hidden">
+                        <div class="col-md-8 activity-content-text">
+                            Hal pertama yang harus dilakukan ketika sudah masuk ke aplikasi adalah menemukan kelas jika anda adalah seorang murid atau membuat kelas baru jika anda adalah seorang guru.
+                        </div>
+                    </div>
+                    <div class="row justify-content-center activity-content activity-content--3 hidden">
+                        <div class="col-md-8 activity-content-text">Nikmati proses belajar mengajar anda dengan banyaknya fitur yang terdapat pada aplikasi</div>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- Akhir Activity -->
 
-        <!-- Awal Testimoni -->
+        <!-- Awal Reasons -->
         <section>
-            <div class="container-fluid mt-5">
+            <div class="container-fluid mt-4 mb-4">
                 <div class="container-md">
-                    <h6 class="text-info">WHY USE OURS?</h6>
-                    <h4 class="fs-1">HERE ARE SOME PEOPLE’S PERSEPTION ABOUT US</h4>
+                    <div class="row">
+                        <div class="col-auto">
+                            <h6 class="text-info">WHY USE OURS?</h6>
+                            <h4 class="fs-1">HERE ARE SOME ADVANTAGE WHILE USING OURS</h4>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-auto mb-3">
+                            <div class="card">
+                                <div class="box"><img src="assets/img/icons/svg/fi-rr-checkbox.svg" alt="" /></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Easy to use</h5>
+                                    <p class="card-text">Aplikasi ini menawarkan kemudahan akses dan penggunaan bagi guru dan murid</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto mb-3">
+                            <div class="card">
+                                <div class="box"><img src="assets/img/icons/svg/fi-rr-comment-alt.svg" alt="" /></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">real-time group chat</h5>
+                                    <p class="card-text">fitur real-time chat memberikan kemudahan interaksi antara guru dan murid atau sesama murid</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto mb-3">
+                            <div class="card">
+                                <div class="box"><img src="assets/img/icons/svg/fi-rr-document-signed.svg" alt="" /></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Task maintainer</h5>
+                                    <p class="card-text">Terdapat analisis nilai dari siswa sehingga mereka bisa melihat capaian belajar mereka</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto mb-3">
+                            <div class="card">
+                                <div class="box"><img src="assets/img/icons/svg/fi-rr-users.svg" alt="" /></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">class management</h5>
+                                    <p class="card-text">guru dapat memberikan pengaturan dan pemantauan terhadap siswa di kelas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- Akhir Activity -->
+        <!-- Akhir Reasons -->
 
         <!-- Awal Foother -->
         <section class="footer-top">
@@ -172,13 +281,20 @@
                 </div>
                 <div class="row pb-3 ps-3">
                     <div class="col">
-                        <p>Copyright 2021. All Rights Reserved</p>
+                        <p>&copy;2021. All Rights Reserved</p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Akhir Foother -->
 
+        <!-- script javascript for DOM manipulation-->
+        <script src="assets/js/script.js"></script>
+
+        <!-- animation -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/TextPlugin.min.js"></script>
+        <script src="assets/js/animation.js"></script>
         <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
