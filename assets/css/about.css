@@ -1,14 +1,53 @@
 .sosmed {
-    width: 3vw;
-    padding-right: 5px;
+	width: 3vw;
+	padding-right: 5px;
+}
+.awal{
+	margin-bottom: 20vw;
 }
 .about {
-    margin-top: 200px;
-    margin-bottom: 250px;
+	font-size: 5vw;
+	position: relative;
+	/* margin-top: 200px; */
+}
+.animation{
+	animation: mymove 2s forwards ;
+}
+.teamwork {
+	margin-top: 6vw;
+}
+.our {
+	font-size: 4vw;
+	position: relative;
+	display: inline-block;
+	background-color: var(--brand-color);
+	transform: skewX(-15deg);
+	height: 5vw;
+	color: white;
+	padding-right: 10px;
+	padding-left: 10px;
 }
 .bio {
-    margin-top: 100px;
+	margin-top: 10px;
+}
+.def {
+	margin-top: 3vw;
 }
 .info {
-    margin-top: 200px;
+	margin-top: 20vw;
+}
+
+@keyframes mymove {
+	from {
+		left: -100%;
+	}
+	to {
+		left: 0%;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	body {
+	  background-color: lawngreen;
+	}
 }
