@@ -103,7 +103,22 @@ h3 {
     width: 100%;
     height: 100%;
 }
-@media screen and (max-width: 600px) {
+/* Modal */
+.but {
+    width: 40%;
+}
+.bit {
+    width: 90%;
+    padding-left: 10%;
+}
+.activ {
+    background-color: #1e3069;
+}
+.bg-muted {
+    background-color: #C4C4C4;
+}
+/* Tampilan Hp */
+@media screen and (max-width: 500px) {
     .fs-text {
         font-size: 8px;
     }
