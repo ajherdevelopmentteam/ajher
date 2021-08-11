@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -7,6 +6,8 @@
 
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+        
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -40,6 +41,36 @@
         </div>
         <!-- preloading -->
 
+        <!-- Awal Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body btn-group d-flex justify-content-center mt-3">
+                        <button type="button" class="btn btn-secondary activ but">Login</button>
+                        <button type="button" class="btn btn-secondary but">Sign up</button>
+                    </div>
+                    <div class="modal-body">
+                        <h6 class="text-center">Login to our app</h6>
+                        <form class="d-flex justify-content-center flex-column">
+                            <div class="form-group bit">
+                                <input type="email" class="form-control bg-muted" placeholder="Email or username" />
+                            </div>
+                            <div class="form-group bit">
+                                <input type="password" class="form-control bg-muted" placeholder="Password" />
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="button" class="btn btn-secondary activ but">Login</button>
+                            </div>
+                        </form>
+                        <p class="text-center">Didn’t have account yet?, sign up</p>
+                        <h6 class="text-center">or login use</h6>
+                        <p class="text-center"><a href="https://www.google.com/"><i class="fab fa-google"></i></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Akhir Modal -->
+
         <!-- Awal Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
             <div class="container-fluid">
@@ -61,7 +92,7 @@
                         <li class="nav-item pe-4">
                             <a class="nav-link tebal-sedang" href="contact.html">CONTACT</a>
                         </li>
-                        <button type="submit" class="btn shadow-sm text-light warna-btn">Login or Sign up</button>
+                        <button type="submit" class="btn shadow-sm text-light warna-btn" data-toggle="modal" data-target="#exampleModal">Login or Sign up</button>
                     </ul>
                 </div>
             </div>
@@ -291,6 +322,11 @@
 
         <!-- script javascript for DOM manipulation-->
         <script src="assets/js/script.js"></script>
+
+        <!-- Modal -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 
         <!-- animation -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
