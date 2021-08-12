@@ -104,14 +104,14 @@ h3 {
     height: 100%;
 }
 /* Modal */
-.but {
-    width: 40%;
+.btn {
+    width: 30%;
 }
 .bit {
     width: 90%;
     padding-left: 10%;
 }
-.activ {
+.btn-active {
     background-color: #1e3069;
 }
 .bg-muted {
