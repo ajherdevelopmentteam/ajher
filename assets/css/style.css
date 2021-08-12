@@ -117,6 +117,7 @@ h3 {
 .bg-muted {
     background-color: #C4C4C4;
 }
+
 /* Tampilan Hp */
 @media screen and (max-width: 500px) {
     .fs-text {
