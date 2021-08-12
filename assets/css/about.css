@@ -1,79 +1,53 @@
-.about{
-    margin-top: 90px;    
-    font-size:50px; 
-    font-family:sans-serif; 
-    font-weight: bold;
-    
+.sosmed {
+	width: 3vw;
+	padding-right: 5px;
+}
+.awal{
+	margin-bottom: 20vw;
+}
+.about {
+	font-size: 5vw;
+	position: relative;
+	/* margin-top: 200px; */
+}
+.animation{
+	animation: mymove 2s forwards ;
+}
+.teamwork {
+	margin-top: 6vw;
+}
+.our {
+	font-size: 4vw;
+	position: relative;
+	display: inline-block;
+	background-color: var(--brand-color);
+	transform: skewX(-15deg);
+	height: 5vw;
+	color: white;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.bio {
+	margin-top: 10px;
+}
+.def {
+	margin-top: 3vw;
+}
+.info {
+	margin-top: 20vw;
 }
 
-.kami{
-    clear: left;
-    font-weight: bo ld;
-    font-size: 25px;
-    width: 600px;
-    margin-bottom: 500px;
-}
-.teamwork{
-    margin-top: 80px;
-    width: 575.17px;
-    height: 368.36px;
-}
-.sosmed{
-    float: left;
-    width: 30px;
-    height: 30px;
+@keyframes mymove {
+	from {
+		left: -100%;
+	}
+	to {
+		left: 0%;
+	}
 }
 
-.foto{
-    float: left;
-    margin-bottom: 50px;
-    height: 400px;
-    width: 600px;
-    
-}
-.col{
-    margin-left: 10px;
-}
-h2{
-    /* float: left; */
-    /* clear: right; */
-    margin-left: 30px;
-    margin-top: 80px;
-}
-p{
-    width: 500px;
-    float: inline-end;
-    margin-left: 30px;
-    margin-top: 10px;
-}
-.peka{
-    float: left;
-    margin-top: 100px ;
-    font-size: 50px;
-    font-family:monospace;
-    font-weight: bold;
-    width: 600px;
-}
-.email{
-    float: right;
-    margin-top: 150px;
-    margin-bottom: 50px;
-    height: 400px;
-    width: 600px;
-}
-.btn-lg.round {
-	border-radius: 24px;
-}
-
-
-.text-garis {
-    border-bottom: 2px solid #00DDf3;
-    width: fit-content;
-}
-.tebal-sedang {
-    font-weight: bold;
-}
-.footer-top {
-    background-color: #1E3069;
-    color: #fff;
+@media screen and (max-width: 600px) {
+	.about{
+		
+	}
 }
