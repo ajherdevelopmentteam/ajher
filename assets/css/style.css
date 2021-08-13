@@ -104,18 +104,72 @@ h3 {
     height: 100%;
 }
 /* Modal */
+
+.modal-body{
+    overflow: hidden;
+}
+.sign-up{
+    height:50vh;
+}
+.progress-box{
+    width:80%;
+    margin:0 auto;
+
+}
+.progress-signup, .progress-signup-behind{
+    height:1%;
+    position:absolute;
+    top:54;
+}
+.progress-signup{
+    width:0%;
+    transition: 1s;
+    z-index:7;
+}
+.progress-signup-behind{
+    width:74%;
+    z-index:5;
+}
+.circle{
+    height:1.5vh;
+    width:1.5vh;
+    display:inline-block;
+    border-radius: 50%;
+}
+.circle:not(.circle-1){
+    margin-left:28.56789%;
+}
+
+.signup form{
+    position: absolute;
+    left:0;
+    transition: 1s;
+}
 .btn {
     width: 30%;
+    height:6vh;
 }
-.bit {
-    width: 90%;
+/* .bit {
+    width: 100%;
     padding-left: 10%;
-}
+} */
 .btn-active {
     background-color: #1e3069;
+    color:#fff;
 }
 .bg-muted {
     background-color: #C4C4C4;
+}
+
+.signup-page-1,.signup-page-2,.signup-page-3,.signup-page-4{
+    position:absolute;
+    top:50;
+    width: 90%;
+    padding-left: 5%;
+    
+}
+.signup-page-2, .signup-page-3, .signup-page-4{
+    left:500;
 }
 
 /* Tampilan Hp */
