@@ -104,14 +104,7 @@ h3 {
     height: 100%;
 }
 /* Modal */
-<<<<<<< HEAD
-.modal-content{
-    height:60vh;
-}
-.btn {
-    width: 30%;
-    height: 6vh;
-=======
+
 .modal-body{
     overflow: hidden;
 }
@@ -126,7 +119,6 @@ h3 {
 .btn {
     width: 30%;
     height:6vh;
->>>>>>> reg
 }
 /* .bit {
     width: 100%;
@@ -138,15 +130,7 @@ h3 {
 .bg-muted {
     background-color: #C4C4C4;
 }
-<<<<<<< HEAD
-.signup-page-1, .signup-page-2, .signup-page-3, .signup-page-4{
-    position:absolute;
-    margin-top: 20vh;
-}
-.signup-page-2, .signup-page-3, .signup-page-4{
-    left:450;
-}
-=======
+
 form{
     position:absolute;
     top:50;
@@ -158,8 +142,6 @@ form{
     left:500;
 }
 
-
->>>>>>> reg
 /* Tampilan Hp */
 @media screen and (max-width: 500px) {
     .fs-text {
