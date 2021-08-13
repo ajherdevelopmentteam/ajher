@@ -36,3 +36,10 @@ const loadingFunction = function(){
   }
 }
 let loading = setInterval(loadingFunction,1000);
+
+// signup modal
+// selecting the elements
+const form1 = document.querySelector('.signup-form-1');
+const form2 = document.querySelector('.signup-form-2');
+const form3 = document.querySelector('.signup-form-3');
+const form4 = document.querySelector('.signup-form-4');
