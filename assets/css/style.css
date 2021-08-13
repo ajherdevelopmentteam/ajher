@@ -110,6 +110,35 @@ h3 {
 .sign-up{
     height:50vh;
 }
+.progress-box{
+    width:80%;
+    margin:0 auto;
+
+}
+.progress-signup, .progress-signup-behind{
+    height:1%;
+    position:absolute;
+    top:54;
+}
+.progress-signup{
+    width:0%;
+    transition: 1s;
+    z-index:7;
+}
+.progress-signup-behind{
+    width:74%;
+    z-index:5;
+}
+.circle{
+    height:1.5vh;
+    width:1.5vh;
+    display:inline-block;
+    border-radius: 50%;
+}
+.circle:not(.circle-1){
+    margin-left:28.56789%;
+}
+
 .signup form{
     position: absolute;
     left:0;
