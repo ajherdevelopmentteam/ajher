@@ -46,8 +46,8 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-body btn-group d-flex justify-content-center mt-3">
-                        <button type="button" class="btn btn-secondary btn-active">Login</button>
-                        <button type="button" class="btn btn-secondary">Sign up</button>
+                        <button type="button" class="btn btn-login btn-secondary">Login</button>
+                        <button type="button" class="btn btn-signup btn-active">Sign up</button>
                     </div>
                     <div class="modal-body">
                         <div class="login hidden">
@@ -69,7 +69,16 @@
                         </div>
                         <div class="sign-up">
                             <h6 class="text-center">Sign up for free</h6>
-                            <form class="d-flex justify-content-center flex-column signup-page-1">
+                            <div class="progress-box">
+                                <div class="progress-signup bg-primary"></div>
+                                <div class="progress-signup-behind bg-secondary"></div>
+                                <div class="circle circle-1 bg-primary"></div>
+                                <div class="circle circle-2 bg-secondary"></div>
+                                <div class="circle circle-3 bg-secondary"></div>
+                                <div class="circle circle-4 bg-secondary"></div>
+                            </div>
+                            
+                            <form class="d-flex justify-content-center mt-4 flex-column signup-page-1">
                                 <h7>Select your location</h7>
                                 <div class="country mt-3">
                                     <select name="country" id="country" class="form-select">
@@ -85,7 +94,8 @@
                                     <button type="button" class="to-next-page-1 btn btn-active text-white">Next</button>
                                 </div>
                             </form>
-                            <form class="d-flex justify-content-center flex-column signup-page-2">
+                            <form class="d-flex justify-content-center mt-4 flex-column signup-page-2">
+                                <h7>input your personal identities</h7>
                                 <div class="form-group bit">
                                     <input type="text" class="form-control bg-muted" placeholder="Username" />
                                 </div>
@@ -100,7 +110,7 @@
                                     <button type="button" class="to-next-page-2 btn btn-active text-white ms-3">Next</button>
                                 </div>
                             </form>
-                            <form class="d-flex justify-content-center flex-column signup-page-3">
+                            <form class="d-flex justify-content-center mt-4 flex-column signup-page-3">
                                 <h7>Date and birth</h7>
                                 <div class="form-group bit">
                                     <input type="date" class="form-control bg-muted" />
@@ -109,7 +119,7 @@
                                     <select name="gender" id="gender" class="form-select">
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
-                                        <option value="Better don't say">Better don't say"</option>
+                                        <option value="Better don't say">Better don't say</option>
                                     </select>
                                 </div>
                                 <div class="btn-next mt-4 d-flex justify-content-end">
@@ -117,9 +127,9 @@
                                     <button type="button" class="to-next-page-3 btn btn-active text-white ms-3">Next</button>
                                 </div>
                             </form>
-                            <form class="d-flex justify-content-center flex-column signup-page-4">
+                            <form class="d-flex justify-content-center mt-4 flex-column signup-page-4">
                                 <h7>Tell us about you</h7><br>
-                                <textarea name="bio" id="bio" cols="50" rows="6"></textarea>
+                                <textarea name="bio" id="bio" cols="50" rows="6" placeholder="(e.g) I'm a student that want to learn anything"></textarea>
                                 <div class="btn-next mt-4 d-flex justify-content-end">
                                     <button type="button" class="to-prev-page-4 btn btn-active text-white">Back</button>
                                     <input type="submit" class="btn btn-active text-white ms-3" value="submit">
