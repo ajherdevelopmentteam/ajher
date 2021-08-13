@@ -37,6 +37,35 @@ const loadingFunction = function(){
 }
 let loading = setInterval(loadingFunction,1000);
 
+// modal login and signup toggle
+const loginBox = document.querySelector('.login');
+const signupBox = document.querySelector('.sign-up');
+
+const loginToggleBtn = document.querySelector('.btn-login');
+const signupToggleBtn = document.querySelector('.btn-signup');
+
+loginToggleBtn.addEventListener('click',function(e){
+  loginToggleBtn.classList.remove('btn-secondary');
+  loginToggleBtn.classList.add('btn-active');
+
+  signupToggleBtn.classList.add('btn-secondary');
+  signupToggleBtn.classList.remove('btn-active');
+
+  loginBox.classList.remove('hidden');
+  signupBox.classList.add('hidden');
+});
+
+signupToggleBtn.addEventListener('click',function(){
+  signupToggleBtn.classList.remove('btn-secondary');
+  signupToggleBtn.classList.add('btn-active');
+
+  loginToggleBtn.classList.add('btn-secondary');
+  loginToggleBtn.classList.remove('btn-active');
+
+  signupBox.classList.remove('hidden');
+  loginBox.classList.add('hidden');
+});
+
 // signup modal
 // selecting the elements
 const form1 = document.querySelector('.signup-page-1');

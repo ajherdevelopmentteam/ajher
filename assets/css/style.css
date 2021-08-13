@@ -154,11 +154,12 @@ h3 {
 } */
 .btn-active {
     background-color: #1e3069;
+    color:#fff;
 }
 .bg-muted {
     background-color: #C4C4C4;
 }
-form{
+.signup-page-1,.signup-page-2,.signup-page-3,.signup-page-4{
     position:absolute;
     top:50;
     width: 90%;
@@ -168,7 +169,6 @@ form{
 .signup-page-2, .signup-page-3, .signup-page-4{
     left:500;
 }
-
 
 /* Tampilan Hp */
 @media screen and (max-width: 500px) {
