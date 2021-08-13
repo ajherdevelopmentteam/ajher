@@ -39,7 +39,60 @@ let loading = setInterval(loadingFunction,1000);
 
 // signup modal
 // selecting the elements
-const form1 = document.querySelector('.signup-form-1');
-const form2 = document.querySelector('.signup-form-2');
-const form3 = document.querySelector('.signup-form-3');
-const form4 = document.querySelector('.signup-form-4');
+const form1 = document.querySelector('.signup-page-1');
+const form2 = document.querySelector('.signup-page-2');
+const form3 = document.querySelector('.signup-page-3');
+const form4 = document.querySelector('.signup-page-4');
+
+// selecting the buttons
+// button next
+const btnNext1 = document.querySelector('.to-next-page-1');
+const btnNext2 = document.querySelector('.to-next-page-2');
+const btnNext3 = document.querySelector('.to-next-page-3');
+
+// button prev
+const btnPrev2 = document.querySelector('.to-prev-page-2');
+const btnPrev3 = document.querySelector('.to-prev-page-3');
+const btnPrev4 = document.querySelector('.to-prev-page-4');
+
+btnNext1.addEventListener('click',function(){
+  form1.style.left = "-500";
+  form2.style.left = "0";
+  form1.style.transition = "1s";
+  form2.style.transition = "1s";
+});
+
+btnNext2.addEventListener('click',function(){
+  form2.style.left = "-500";
+  form3.style.left = "0";
+  form2.style.transition = "1s";
+  form3.style.transition = "1s";
+});
+
+btnNext3.addEventListener('click',function(){
+  form3.style.left = "-500";
+  form4.style.left = "0";
+  form3.style.transition = "1s";
+  form4.style.transition = "1s";
+});
+
+btnPrev2.addEventListener('click',function(){
+  form1.style.left = "0";
+  form2.style.left = "500";
+  form1.style.transition = "1s";
+  form2.style.transition = "1s";
+});
+
+btnPrev3.addEventListener('click',function(){
+  form2.style.left = "0";
+  form3.style.left = "500";
+  form2.style.transition = "1s";
+  form3.style.transition = "1s";
+});
+
+btnPrev4.addEventListener('click',function(){
+  form3.style.left = "0";
+  form4.style.left = "500";
+  form3.style.transition = "1s";
+  form4.style.transition = "1s";
+});
