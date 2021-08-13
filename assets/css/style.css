@@ -104,8 +104,12 @@ h3 {
     height: 100%;
 }
 /* Modal */
+.modal-content{
+    height:60vh;
+}
 .btn {
     width: 30%;
+    height: 6vh;
 }
 .bit {
     width: 90%;
@@ -117,7 +121,13 @@ h3 {
 .bg-muted {
     background-color: #C4C4C4;
 }
-
+.signup-page-1, .signup-page-2, .signup-page-3, .signup-page-4{
+    position:absolute;
+    margin-top: 20vh;
+}
+.signup-page-2, .signup-page-3, .signup-page-4{
+    left:450;
+}
 /* Tampilan Hp */
 @media screen and (max-width: 500px) {
     .fs-text {
