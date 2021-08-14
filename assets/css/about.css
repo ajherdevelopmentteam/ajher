@@ -2,9 +2,6 @@
 	width: 3vw;
 	padding-right: 5px;
 }
-.awal{
-	margin-bottom: 20vw;
-}
 .about {
 	font-size: 5vw;
 	position: relative;
@@ -13,8 +10,11 @@
 .animation{
 	animation: mymove 2s forwards ;
 }
-.teamwork {
+/* .teamwork {
 	margin-top: 6vw;
+} */
+.allabout{
+	margin-bottom: 20vw;
 }
 .our {
 	font-size: 4vw;
@@ -29,6 +29,7 @@
 }
 .bio {
 	margin-top: 10px;
+	animation-delay: inherit;
 }
 .def {
 	margin-top: 3vw;
@@ -36,6 +37,10 @@
 .info {
 	margin-top: 20vw;
 }
+.all {
+	margin-top: 120px;
+}
+
 
 @keyframes mymove {
 	from {
@@ -47,7 +52,10 @@
 }
 
 @media screen and (max-width: 600px) {
-	.about{
-		
+	.all{
+		margin-top: 50px;
+	}
+	.allabout{
+		margin-bottom: 10vw;
 	}
 }
