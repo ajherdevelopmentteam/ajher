@@ -7,7 +7,7 @@
 	position: relative;
 	/* margin-top: 200px; */
 }
-.animation{
+.au{
 	animation: mymove 2s forwards ;
 }
 /* .teamwork {
@@ -51,11 +51,11 @@
 	}
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
 	.all{
 		margin-top: 50px;
 	}
 	.allabout{
 		margin-bottom: 10vw;
-	}
-}
+	} */
+/* } */
