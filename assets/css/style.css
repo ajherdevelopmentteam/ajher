@@ -33,6 +33,9 @@ h3 {
 .caption-full {
     font-size: 1.5vw;
 }
+.pdb {
+    margin-bottom: 80px;
+}
 /* .learn-more{
     margin-top:14vh;
 } */
@@ -45,7 +48,7 @@ h3 {
     color: white;
 }
 .caption-title h3:nth-child(2) {
-    margin-left: 2.4vw;
+    margin-left: 2.1vw;
 }
 .text-animation {
     font-weight: bolder;
@@ -105,75 +108,154 @@ h3 {
 }
 /* Modal */
 
-.modal-body{
+.modal-body {
     overflow: hidden;
 }
-.sign-up{
-    height:50vh;
+.sign-up {
+    height: 50vh;
 }
-.progress-box{
-    width:80%;
-    margin:0 auto;
-
+.progress-box {
+    width: 80%;
+    margin: 0 auto;
 }
-.progress-signup, .progress-signup-behind{
-    height:1%;
-    position:absolute;
-    top:54;
+.progress-signup,
+.progress-signup-behind {
+    height: 1%;
+    position: absolute;
+    top: 54;
 }
-.progress-signup{
-    width:0%;
+.progress-signup {
+    width: 0%;
     transition: 1s;
-    z-index:7;
+    z-index: 7;
 }
-.progress-signup-behind{
-    width:74%;
-    z-index:5;
+.progress-signup-behind {
+    width: 74%;
+    z-index: 5;
 }
-.circle{
-    height:1.5vh;
-    width:1.5vh;
-    display:inline-block;
+.circle {
+    height: 1.5vh;
+    width: 1.5vh;
+    display: inline-block;
     border-radius: 50%;
 }
-.circle:not(.circle-1){
-    margin-left:28.56789%;
+.circle:not(.circle-1) {
+    margin-left: 28.56789%;
 }
 
-.signup form{
+.signup form {
     position: absolute;
-    left:0;
+    left: 0;
     transition: 1s;
 }
-.btn {
+.btn-click {
     width: 30%;
-    height:6vh;
+    height: 6vh;
 }
-/* .bit {
-    width: 100%;
+.but {
+    width: 40%;
+}
+.bit {
+    width: 90%;
     padding-left: 10%;
-} */
+}
 .btn-active {
     background-color: #1e3069;
-    color:#fff;
+    color: #fff;
 }
 .bg-muted {
-    background-color: #C4C4C4;
+    background-color: #c4c4c4;
 }
 
-.signup-page-1,.signup-page-2,.signup-page-3,.signup-page-4{
-    position:absolute;
-    top:50;
+.signup-page-1,
+.signup-page-2,
+.signup-page-3,
+.signup-page-4 {
+    position: absolute;
+    top: 50;
     width: 90%;
     padding-left: 5%;
-    
 }
-.signup-page-2, .signup-page-3, .signup-page-4{
-    left:500;
+.signup-page-2,
+.signup-page-3,
+.signup-page-4 {
+    left: 500;
+}
+
+/* Navbar Animasi */
+.animated-icon1 {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.animated-icon1 span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+}
+
+.animated-icon1 span {
+    background: var(--brand-color);
+}
+
+.animated-icon1 span:nth-child(1) {
+    top: 0px;
+}
+
+.animated-icon1 span:nth-child(2) {
+    top: 10px;
+}
+
+.animated-icon1 span:nth-child(3) {
+    top: 20px;
+}
+
+.animated-icon1.open span:nth-child(1) {
+    top: 11px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.animated-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.animated-icon1.open span:nth-child(3) {
+    top: 11px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
 }
 
 /* Tampilan Hp */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .fs-text {
         font-size: 8px;
     }
@@ -185,6 +267,14 @@ h3 {
         height: 20px;
         width: 20px;
         margin: 0.8rem 0 0 0.8rem;
+    }
+    .btn-click {
+        font-size: 6px;
+        width: 30%;
+        height: 3vh;
+    }
+    .pdb {
+        margin-bottom: 20px;
     }
 }
 /* @media screen and (max-width:620px){
