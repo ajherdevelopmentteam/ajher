@@ -12,4 +12,11 @@ let typed = new Typed(".text-animation", {
   loop: true,
   
 });
+let typed = new Typed(".animation-text", {
+  strings: ["terhubung dengan rekan sekelas", "terhubung dengan guru", "memanajemen proses belajar"],
+  typeSpeed: 100,
+  backSpeed: 60,
+  loop: true,
+  
+});
 

@@ -2,19 +2,20 @@
 	width: 3vw;
 	padding-right: 5px;
 }
-.awal{
-	margin-bottom: 20vw;
-}
 .about {
 	font-size: 5vw;
 	position: relative;
 	/* margin-top: 200px; */
 }
-.animation{
-	animation: mymove 2s forwards ;
+.animation-tittle{
+	animation: tittle-move 4s forwards ;
 }
-.teamwork {
-	margin-top: 6vw;
+.animation-text{
+	font-size: 1.5vw;
+	animation: text-move 4s forwards ;
+}
+.allabout{
+	margin-bottom: 20vw;
 }
 .our {
 	font-size: 4vw;
@@ -29,19 +30,48 @@
 }
 .bio {
 	margin-top: 10px;
+	animation-delay: inherit;
+}
+.slogan{
+	font-size: 1.3vw;
 }
 .def {
+	height: 10vw;
 	margin-top: 3vw;
 }
 .info {
 	margin-top: 20vw;
 }
+.all {
+	margin-top: 120px;
+}
 
-@keyframes mymove {
+
+@keyframes tittle-move {
 	from {
 		left: -100%;
 	}
 	to {
 		left: 0%;
+	}
+}
+@keyframes text-move {
+	from {
+		opacity: 0%;
+	}
+	to {
+		opacity: 100%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.teamwork {
+		padding-right: 8vw;
+	}
+	.all{
+		margin-top: 50px;
+	}
+	.allabout{
+		margin-bottom: 10vw;
 	}
 }
