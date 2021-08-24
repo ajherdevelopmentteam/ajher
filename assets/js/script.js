@@ -1,6 +1,7 @@
 $(document).ready(function () {
-    $('.first-button').on('click', function () {
-        $('.animated-icon1').toggleClass('open');
+    $(function () {
+        $('.nav-modal').load('modal.html');
+        $('.footer').load('footer.html');
     });
 });
 
@@ -40,4 +41,5 @@ const loadingFunction = function () {
         }, 1000);
     }
 };
+
 let loading = setInterval(loadingFunction, 1000);
