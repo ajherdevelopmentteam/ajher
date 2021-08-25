@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $(function () {
-        $('.nav-modal').load('modal.html');
-        $('.footer').load('footer.html');
+        $('.nav-modal').load('include/modal.html');
+        $('.footer').load('include/footer.html');
     });
 });
 
@@ -29,7 +29,9 @@ activityButtons.addEventListener('click', (e) => {
 const progressBar = document.querySelector('.progress-bar');
 const body = document.querySelector('body');
 body.style.overflow = 'hidden';
+let loading;
 let val = 0;
+let repeat;
 const loadingFunction = function () {
     val += 20;
     progressBar.style.width = `${val}%`;
@@ -42,4 +44,8 @@ const loadingFunction = function () {
     }
 };
 
-let loading = setInterval(loadingFunction, 1000);
+window.addEventListener('load',function(){
+    loading = setInterval(loadingFunction, 1000);
+});
+
+

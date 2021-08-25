@@ -84,3 +84,19 @@ btnPrev3.addEventListener('click', function () {
 btnPrev4.addEventListener('click', function () {
     stepFunction(form3, form4, 0, 500, 50, '.circle-4');
 });
+
+const navItemList = document.querySelectorAll('.nav-item');
+console.log(navItemList);
+navItemList.forEach(function(data){
+    data.children[0].classList.remove('active');
+    data.children[0].classList.remove('text-info');
+    data.children[0].classList.remove('text-garis');
+
+    if(data.dataset.page === window.location.href.split('/')[3].split('.')[0]){
+        const elementActive = document.querySelector(`[data-page="${data.dataset.page}"]`);
+        elementActive.children[0].classList.add('active');
+        elementActive.children[0].classList.add('text-info');
+        elementActive.children[0].classList.add('text-garis');
+    }
+});
+
