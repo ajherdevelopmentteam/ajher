@@ -6,9 +6,28 @@
 body {
     background-color: var(--background-color);
 }
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background-color: var(--second-brand-color);
+}
 h3 {
-    font-size: 2.4vw;
+    font-size: 2.24vw;
     font-weight: bolder;
+}
+.wrapper p{
+    font-size:1.3vw;
 }
 .navbar {
     background-color: #fff;
@@ -17,9 +36,7 @@ h3 {
     padding-top: 2.5rem;
     /* height: 85vh; */
 }
-.warna-btn {
-    background-color: var(--second-brand-color);
-}
+
 .text-garis {
     border-bottom: 2px solid var(--brand-color);
     width: fit-content;
@@ -74,6 +91,10 @@ h3 {
 .card {
     width: 15rem;
 }
+.card:hover{
+    box-shadow: 0px 2px 5px 2px gray;
+    transition: 0.5s;
+}
 .card .box {
     height: 2rem;
     width: 2rem;
@@ -115,14 +136,15 @@ h3 {
     height: 50vh;
 }
 .progress-box {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 .progress-signup,
 .progress-signup-behind {
+    margin:0 auto;
     height: 1%;
     position: absolute;
-    top: 54;
+    top : 48;
 }
 .progress-signup {
     width: 0%;
@@ -130,18 +152,24 @@ h3 {
     z-index: 7;
 }
 .progress-signup-behind {
-    width: 74%;
+    width: 90%;
     z-index: 5;
+}
+.circle-box{
+    width:100%;
+    margin:0 auto;
 }
 .circle {
     height: 1.5vh;
     width: 1.5vh;
     display: inline-block;
     border-radius: 50%;
+    position: relative;
+    z-index:999999;
 }
-.circle:not(.circle-1) {
+/* .circle:not(.circle-1) {
     margin-left: 28.56789%;
-}
+} */
 
 .signup form {
     position: absolute;
@@ -160,7 +188,11 @@ h3 {
     padding-left: 10%;
 }
 .btn-active {
-    background-color: #1e3069;
+    background-color: var(--second-brand-color);
+    color: #fff;
+}
+.btn-active:hover{
+    background-color: #051446;
     color: #fff;
 }
 .bg-muted {
@@ -277,38 +309,3 @@ h3 {
         margin-bottom: 20px;
     }
 }
-/* @media screen and (max-width:620px){
-    h3{
-        font-size:5vw;
-        font-weight: bolder;
-    }
-    #home {
-        padding-top: 6rem;
-        height: 85vh;
-    }
-    .caption-title{
-        margin-top:5vh;
-    }
-    .text-highlight{
-        height:4vh;
-    }
-    .caption-full{
-        font-size:3vw;
-    }
-    .learn-more{
-        margin-top:14vh;
-    }
-}
-
-@media screen and (min-width:721px) and (max-width:1320px){
-    #home {
-        padding-top: 6rem;
-        height: 60vh;
-    }
-}
-
-@media screen and (max-height:512px){
-    .vektor-home{
-        width:50%;
-    }
-} */

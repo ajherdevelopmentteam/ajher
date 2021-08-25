@@ -19,7 +19,7 @@
                 <li class="nav-item pe-4" data-page="contact">
                     <a class="nav-link tebal-sedang" href="contact.html">CONTACT</a>
                 </li>
-                <button type="submit" class="btn shadow-sm text-light warna-btn" data-toggle="modal" data-target="#exampleModal">Login or Sign up</button>
+                <button type="submit" class="btn shadow-sm text-light btn-active" data-toggle="modal" data-target="#formModal">Login or Sign up</button>
             </ul>
         </div>
     </div>
@@ -27,7 +27,7 @@
 <!-- Akhir Navbar -->
 
 <!-- Awal Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body btn-group d-flex justify-content-center mt-3">
@@ -45,7 +45,7 @@
                             <input type="password" class="form-control bg-muted" placeholder="Password" />
                         </div>
                         <div class="form-group text-center">
-                            <button type="button" class="btn btn-secondary btn btn-active">Login</button>
+                            <button type="button" class="btn btn-active">Login</button>
                         </div>
                     </form>
                     <p class="text-center">Didn’t have account yet?, sign up</p>
@@ -57,12 +57,19 @@
                 <div class="sign-up">
                     <h6 class="text-center">Sign up for free</h6>
                     <div class="progress-box">
-                        <div class="progress-signup bg-primary"></div>
-                        <div class="progress-signup-behind bg-secondary"></div>
-                        <div class="circle circle-1 bg-primary"></div>
-                        <div class="circle circle-2 bg-secondary"></div>
-                        <div class="circle circle-3 bg-secondary"></div>
-                        <div class="circle circle-4 bg-secondary"></div>
+                        <div class="progress-step-box">
+                            <div class="progress-signup bg-primary"></div>
+                        </div>
+                        <div class="progress-step-box d-flex justify-content-center">
+                            <div class="progress-signup-behind bg-secondary"></div>
+                        </div>
+                        
+                        <div class="circle-box d-flex justify-content-between align-item-center">
+                            <div class="circle circle-1 bg-primary"></div>
+                            <div class="circle circle-2 bg-secondary"></div>
+                            <div class="circle circle-3 bg-secondary"></div>
+                            <div class="circle circle-4 bg-secondary"></div>
+                        </div>
                     </div>
 
                     <form class="d-flex justify-content-center mt-4 flex-column signup-page-1">

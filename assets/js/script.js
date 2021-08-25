@@ -13,39 +13,45 @@ const activityButtonGroup = document.querySelectorAll('.activity-button');
 const activityContents = document.querySelectorAll('.activity-content');
 
 // homepage activity
-activityButtons.addEventListener('click', (e) => {
-    const clicked = e.target.closest('.activity-button');
+if(activityButtons){
+    activityButtons.addEventListener('click', (e) => {
+        const clicked = e.target.closest('.activity-button');
+    
+        if (!clicked) return;
+    
+        activityButtonGroup.forEach((b) => b.classList.remove('activity-button-active'));
+        activityContents.forEach((c) => c.classList.add('hidden'));
+        clicked.classList.add('activity-button-active');
+    
+        document.querySelector(`.activity-content--${clicked.dataset.tab}`).classList.remove('hidden');
+    });
+}
 
-    if (!clicked) return;
-
-    activityButtonGroup.forEach((b) => b.classList.remove('activity-button-active'));
-    activityContents.forEach((c) => c.classList.add('hidden'));
-    clicked.classList.add('activity-button-active');
-
-    document.querySelector(`.activity-content--${clicked.dataset.tab}`).classList.remove('hidden');
-});
 
 // progress bar
 const progressBar = document.querySelector('.progress-bar');
-const body = document.querySelector('body');
-body.style.overflow = 'hidden';
-let loading;
-let val = 0;
-let repeat;
-const loadingFunction = function () {
-    val += 20;
-    progressBar.style.width = `${val}%`;
-    if (val >= 100) {
-        clearInterval(loading);
-        setTimeout(function () {
-            body.style.overflow = 'visible';
-            document.querySelector('.preloading').classList.add('hidden');
-        }, 1000);
-    }
-};
+if(progressBar){
+    const body = document.querySelector('body');
+    body.style.overflow = 'hidden';
+    let loading;
+    let val = 0;
+    let repeat;
+    const loadingFunction = function () {
+        val += 20;
+        progressBar.style.width = `${val}%`;
+        if (val >= 100) {
+            clearInterval(loading);
+            setTimeout(function () {
+                body.style.overflow = 'visible';
+                document.querySelector('.preloading').classList.add('hidden');
+            }, 1000);
+        }
+    };
 
-window.addEventListener('load',function(){
-    loading = setInterval(loadingFunction, 1000);
-});
+    window.addEventListener('load',function(){
+        loading = setInterval(loadingFunction, 1000);
+    });
+}
+
 
 
