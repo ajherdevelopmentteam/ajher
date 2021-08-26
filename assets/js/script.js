@@ -26,7 +26,6 @@ if(activityButtons){
     });
 }
 
-
 // progress bar
 const progressBar = document.querySelector('.progress-bar');
 if(progressBar){
@@ -34,7 +33,6 @@ if(progressBar){
     body.style.overflow = 'hidden';
     let loading;
     let val = 0;
-    let repeat;
     const loadingFunction = function () {
         val += 20;
         progressBar.style.width = `${val}%`;
@@ -51,6 +49,4 @@ if(progressBar){
         loading = setInterval(loadingFunction, 1000);
     });
 }
-
-
 

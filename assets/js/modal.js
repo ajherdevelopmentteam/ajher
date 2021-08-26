@@ -19,9 +19,11 @@ const getCountry = async function(){
 
 // put to select option
 getCountry().then(a => {
+    let html = ``;
     a.forEach(function(dat){
-        optionSelect.insertAdjacentHTML('afterend',`<option value="${dat.name}">${dat.name}</option>`);
+        html+=`<option value="${dat.name}">${dat.name}</option>`;
     });
+    optionSelect.insertAdjacentHTML('afterend',html);
 });
 
 // change value phone calling codes
@@ -125,17 +127,22 @@ btnPrev4.addEventListener('click', function () {
     stepFunction(form3, form4, 0, 500, 61, '.circle-4',back=true);
 });
 
+// nav change focus
 const navItemList = document.querySelectorAll('.nav-item');
+const changeNavFocus = function(element, typeAction){
+    const classArr = ['active','text-info','text-garis'];
+    classArr.forEach(function(cArr){
+        if(typeAction === 'add'){
+            element.children[0].classList.add(cArr);
+        }else{
+            element.children[0].classList.remove(cArr);
+        }
+    });
+}
 navItemList.forEach(function(data){
-    data.children[0].classList.remove('active');
-    data.children[0].classList.remove('text-info');
-    data.children[0].classList.remove('text-garis');
-
+    changeNavFocus(data,'remove');
     if(data.dataset.page === window.location.href.split('/')[3].split('.')[0]){
         const elementActive = document.querySelector(`[data-page="${data.dataset.page}"]`);
-        elementActive.children[0].classList.add('active');
-        elementActive.children[0].classList.add('text-info');
-        elementActive.children[0].classList.add('text-garis');
+        changeNavFocus(elementActive,'add');
     }
 });
-

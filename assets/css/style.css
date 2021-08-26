@@ -26,6 +26,9 @@ body {
 ::-webkit-scrollbar-thumb:hover{
     background-color: var(--second-brand-color-hover);
 }
+::-webkit-scrollbar-thumb:horizontal {
+    visibility: hidden;
+}
 .preloading img{
     width:100%;
 }
