@@ -1,6 +1,7 @@
 :root {
     --brand-color: #00ddf3;
     --second-brand-color: #1e3069;
+    --second-brand-color-hover : #00196d;
     --background-color: #f5f7fa;
 }
 body {
@@ -13,14 +14,20 @@ body {
 }
  
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
     border-radius: 10px;
 }
  
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
     background-color: var(--second-brand-color);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--second-brand-color-hover);
+}
+.preloading img{
+    width:100%;
 }
 h3 {
     font-size: 2.24vw;
@@ -34,7 +41,6 @@ h3 {
 }
 #home {
     padding-top: 2.5rem;
-    /* height: 85vh; */
 }
 
 .text-garis {
@@ -132,7 +138,11 @@ h3 {
 .modal-body {
     overflow: hidden;
 }
-.sign-up {
+.text-active{
+    color: var(--second-brand-color);
+    cursor:pointer;
+}
+.login, .sign-up {
     height: 50vh;
 }
 .progress-box {
@@ -167,14 +177,17 @@ h3 {
     position: relative;
     z-index:999999;
 }
-/* .circle:not(.circle-1) {
-    margin-left: 28.56789%;
-} */
 
 .signup form {
     position: absolute;
     left: 0;
     transition: 1s;
+}
+.sign-up .phone-number input[type=text]:first-child{
+    width:15%;
+}
+.sign-up .phone-number input[type=text]:nth-child(2){
+    width:80%;
 }
 .btn-click {
     width: 30%;
@@ -192,7 +205,7 @@ h3 {
     color: #fff;
 }
 .btn-active:hover{
-    background-color: #051446;
+    background-color: var(--second-brand-color-hover);
     color: #fff;
 }
 .bg-muted {
@@ -285,9 +298,17 @@ h3 {
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg);
 }
-
+@media screen and (min-width : 1080px){
+    #home {
+        padding:6rem;
+        height: 85vh;
+    }
+}
 /* Tampilan Hp */
 @media screen and (max-width: 600px) {
+    .preloading img{
+        width:30%;
+    }
     .fs-text {
         font-size: 8px;
     }

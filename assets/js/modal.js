@@ -4,11 +4,41 @@ $(document).ready(function () {
         $('.animated-icon1').toggleClass('open');
     });
 });
+
+// select element
+const selectCountry = document.querySelector('.select-country');
+const optionSelect = document.querySelector('.option-select');
+const valuePhone = document.querySelector('.value-phone');
+
+// fetch from API
+const getCountry = async function(){
+    const res = await fetch("https://restcountries.eu/rest/v1/all" );
+    const country = res.json();
+    return country;
+}
+
+// put to select option
+getCountry().then(a => {
+    a.forEach(function(dat){
+        optionSelect.insertAdjacentHTML('afterend',`<option value="${dat.name}">${dat.name}</option>`);
+    });
+});
+
+// change value phone calling codes
+selectCountry.addEventListener('change',function(){
+    getCountry().then(a => {
+        const c = a.filter(b => b.name == selectCountry.value);
+        valuePhone.value = `+${c[0].callingCodes[0]}`;
+    });
+});
+
+// login and signup toggle
 const loginBox = document.querySelector('.login');
 const signupBox = document.querySelector('.sign-up');
 
 const loginToggleBtn = document.querySelector('.btn-login');
 const signupToggleBtn = document.querySelector('.btn-signup');
+const signupToggleText = document.querySelector('.text-signup');
 
 const toggleBtnFunc = function (btn1, btn2, box1, box2) {
     btn1.classList.remove('btn-secondary');
@@ -26,6 +56,10 @@ loginToggleBtn.addEventListener('click', function () {
 });
 
 signupToggleBtn.addEventListener('click', function () {
+    toggleBtnFunc(signupToggleBtn, loginToggleBtn, signupBox, loginBox);
+});
+
+signupToggleText.addEventListener('click', function () {
     toggleBtnFunc(signupToggleBtn, loginToggleBtn, signupBox, loginBox);
 });
 
