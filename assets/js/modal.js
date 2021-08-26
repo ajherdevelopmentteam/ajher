@@ -4,11 +4,41 @@ $(document).ready(function () {
         $('.animated-icon1').toggleClass('open');
     });
 });
+
+// select element
+const selectCountry = document.querySelector('.select-country');
+const optionSelect = document.querySelector('.option-select');
+const valuePhone = document.querySelector('.value-phone');
+
+// fetch from API
+const getCountry = async function(){
+    const res = await fetch("https://restcountries.eu/rest/v1/all" );
+    const country = res.json();
+    return country;
+}
+
+// put to select option
+getCountry().then(a => {
+    a.forEach(function(dat){
+        optionSelect.insertAdjacentHTML('afterend',`<option value="${dat.name}">${dat.name}</option>`);
+    });
+});
+
+// change value phone calling codes
+selectCountry.addEventListener('change',function(){
+    getCountry().then(a => {
+        const c = a.filter(b => b.name == selectCountry.value);
+        valuePhone.value = `+${c[0].callingCodes[0]}`;
+    });
+});
+
+// login and signup toggle
 const loginBox = document.querySelector('.login');
 const signupBox = document.querySelector('.sign-up');
 
 const loginToggleBtn = document.querySelector('.btn-login');
 const signupToggleBtn = document.querySelector('.btn-signup');
+const signupToggleText = document.querySelector('.text-signup');
 
 const toggleBtnFunc = function (btn1, btn2, box1, box2) {
     btn1.classList.remove('btn-secondary');
@@ -26,6 +56,10 @@ loginToggleBtn.addEventListener('click', function () {
 });
 
 signupToggleBtn.addEventListener('click', function () {
+    toggleBtnFunc(signupToggleBtn, loginToggleBtn, signupBox, loginBox);
+});
+
+signupToggleText.addEventListener('click', function () {
     toggleBtnFunc(signupToggleBtn, loginToggleBtn, signupBox, loginBox);
 });
 
@@ -51,42 +85,47 @@ const btnPrev4 = document.querySelector('.to-prev-page-4');
 const progressSignup = document.querySelector('.progress-signup');
 
 // step by step login-signup function
-const stepFunction = function (form1, form2, value1, value2, width, classSelector) {
+const stepFunction = function (form1, form2, value1, value2, width, classSelector,back=false) {
     form1.style.left = `${value1}`;
     form2.style.left = `${value2}`;
     form1.style.transition = '1s';
     form2.style.transition = '1s';
     progressSignup.style.width = `${width}%`;
-    document.querySelector(classSelector).classList.remove('bg-secondary');
-    document.querySelector(classSelector).classList.add('bg-primary');
+    if(!back){
+        document.querySelector(classSelector).classList.remove('bg-secondary');
+        document.querySelector(classSelector).classList.add('bg-primary');
+    }else{
+        document.querySelector(classSelector).classList.remove('bg-primary');
+        document.querySelector(classSelector).classList.add('bg-secondary');
+    }
+    
 };
 
 btnNext1.addEventListener('click', function () {
-    stepFunction(form1, form2, -500, 0, 25, '.circle-2');
+    stepFunction(form1, form2, -500, 0, 31, '.circle-2');
 });
 
 btnNext2.addEventListener('click', function () {
-    stepFunction(form2, form3, -500, 0, 50, '.circle-3');
+    stepFunction(form2, form3, -500, 0, 61, '.circle-3');
 });
 
 btnNext3.addEventListener('click', function () {
-    stepFunction(form3, form4, -500, 0, 74, '.circle-4');
+    stepFunction(form3, form4, -500, 0, 91, '.circle-4');
 });
 
 btnPrev2.addEventListener('click', function () {
-    stepFunction(form1, form2, 0, 500, 0, '.circle-2');
+    stepFunction(form1, form2, 0, 500, 0, '.circle-2',back=true);
 });
 
 btnPrev3.addEventListener('click', function () {
-    stepFunction(form2, form3, 0, 500, 25, '.circle-3');
+    stepFunction(form2, form3, 0, 500, 31, '.circle-3',back=true);
 });
 
 btnPrev4.addEventListener('click', function () {
-    stepFunction(form3, form4, 0, 500, 50, '.circle-4');
+    stepFunction(form3, form4, 0, 500, 61, '.circle-4',back=true);
 });
 
 const navItemList = document.querySelectorAll('.nav-item');
-console.log(navItemList);
 navItemList.forEach(function(data){
     data.children[0].classList.remove('active');
     data.children[0].classList.remove('text-info');
