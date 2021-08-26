@@ -1,0 +1,135 @@
+<!-- Awal Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/logo/Logo.png" alt="" width="50" class="ps-3" />
+            <img src="assets/img/logo/teks.png" alt="" width="90" class="ps-3" />
+        </a>
+        <button class="navbar-toggler first-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="animated-icon1"><span></span><span></span><span></span></div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav navbar-nav ms-auto">
+                <li class="nav-item pe-4" data-page="index">
+                    <a class="nav-link tebal-sedang active text-info text-garis" aria-current="page" href="index.html">HOME</a>
+                </li>
+                <li class="nav-item pe-4" data-page="about">
+                    <a class="nav-link tebal-sedang" href="about.html">ABOUT</a>
+                </li>
+                <li class="nav-item pe-4" data-page="contact">
+                    <a class="nav-link tebal-sedang" href="contact.html">CONTACT</a>
+                </li>
+                <button type="submit" class="btn shadow-sm text-light btn-active" data-toggle="modal" data-target="#formModal">Login or Sign up</button>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Akhir Navbar -->
+
+<!-- Awal Modal -->
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body btn-group d-flex justify-content-center mt-3">
+                <button type="button" class="btn btn-login btn-active but">Login</button>
+                <button type="button" class="btn btn-signup btn-secondary but">Sign up</button>
+            </div>
+            <div class="modal-body">
+                <div class="login">
+                    <h6 class="text-center">Login to our app</h6>
+                    <form class="d-flex justify-content-center flex-column">
+                        <div class="form-group bit">
+                            <input type="email" class="form-control bg-muted" placeholder="Email" required/>
+                        </div>
+                        <div class="form-group bit">
+                            <input type="password" class="form-control bg-muted" placeholder="Password" required/>
+                        </div>
+                        <div class="form-group text-center">
+                            <input type="submit" class="btn btn-active" value="login">
+                        </div>
+                    </form>
+                    <p class="text-center">Didn’t have account yet?,<span class="text-active text-signup">sign up</span></p>
+                </div>
+                <div class="sign-up hidden">
+                    <h6 class="text-center">Sign up for free</h6>
+                    <div class="progress-box">
+                        <div class="progress-step-box">
+                            <div class="progress-signup bg-primary"></div>
+                        </div>
+                        <div class="progress-step-box d-flex justify-content-center">
+                            <div class="progress-signup-behind bg-secondary"></div>
+                        </div>
+                        <div class="circle-box d-flex justify-content-between align-item-center">
+                            <div class="circle circle-1 bg-primary"></div>
+                            <div class="circle circle-2 bg-secondary"></div>
+                            <div class="circle circle-3 bg-secondary"></div>
+                            <div class="circle circle-4 bg-secondary"></div>
+                        </div>
+                    </div>
+                    <form class="d-flex justify-content-center mt-4 flex-column signup-page-1">
+                        <h7>Select your location</h7>
+                        <div class="country mt-3">
+                            <select name="country" id="country" class="form-select select-country">
+                                <option class="option-select">Select your country</option>
+                            </select>
+                        </div>
+                        <div class="phone-number mt-3 d-flex justify-content-between">
+                            <input type="text" class="value-phone" value="" disabled />
+                            <input type="text" placeholder="your phone number"/>
+                        </div>
+                        <div class="btn-next mt-4 d-flex flex-row-reverse">
+                            <button type="button" class="to-next-page-1 btn btn-active text-white">Next</button>
+                        </div>
+                    </form>
+                    <form class="d-flex justify-content-center mt-4 flex-column signup-page-2">
+                        <h7>input your personal identities</h7>
+                        <div class="form-group">
+                            <input type="text" class="form-control bg-muted" placeholder="Name"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control bg-muted" placeholder="Email" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control bg-muted" placeholder="Password" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control bg-muted" placeholder="Confirm Password" />
+                        </div>
+                        <div class="btn-next mt-4 d-flex justify-content-end">
+                            <button type="button" class="to-prev-page-2 btn btn-active text-white">Back</button>
+                            <button type="button" class="to-next-page-2 btn btn-active text-white ms-3">Next</button>
+                        </div>
+                    </form>
+                    <form class="d-flex justify-content-center mt-4 flex-column signup-page-3">
+                        <h7>Date and birth</h7>
+                        <div class="form-group">
+                            <input type="date" class="form-control bg-muted" />
+                        </div>
+                        <div class="gender mt-3">
+                            <select name="gender" id="gender" class="form-select">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Better don't say">Better don't say</option>
+                            </select>
+                        </div>
+                        <div class="btn-next mt-4 d-flex justify-content-end">
+                            <button type="button" class="to-prev-page-3 btn btn-active text-white">Back</button>
+                            <button type="button" class="to-next-page-3 btn btn-active text-white ms-3">Next</button>
+                        </div>
+                    </form>
+                    <form class="d-flex justify-content-center mt-4 flex-column signup-page-4">
+                        <h7>Tell us about you</h7><br />
+                        <textarea name="bio" id="bio" cols="50" rows="6" placeholder="(e.g) I'm a student that want to learn anything"></textarea>
+                        <div class="btn-next mt-4 d-flex justify-content-end">
+                            <button type="button" class="to-prev-page-4 btn btn-active text-white">Back</button>
+                            <input type="submit" class="btn btn-active text-white ms-3" value="submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Akhir Modal -->
+<script src="assets/js/modal.js"></script>
+<!-- <script src="assets/js/script.js"></script> -->
