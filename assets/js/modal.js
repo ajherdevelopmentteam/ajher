@@ -4,11 +4,41 @@ $(document).ready(function () {
         $('.animated-icon1').toggleClass('open');
     });
 });
+
+// select element
+const selectCountry = document.querySelector('.select-country');
+const optionSelect = document.querySelector('.option-select');
+const valuePhone = document.querySelector('.value-phone');
+
+// fetch from API
+const getCountry = async function(){
+    const res = await fetch("https://restcountries.eu/rest/v1/all" );
+    const country = res.json();
+    return country;
+}
+
+// put to select option
+getCountry().then(a => {
+    a.forEach(function(dat){
+        optionSelect.insertAdjacentHTML('afterend',`<option value="${dat.name}">${dat.name}</option>`);
+    });
+});
+
+// change value phone calling codes
+selectCountry.addEventListener('change',function(){
+    getCountry().then(a => {
+        const c = a.filter(b => b.name == selectCountry.value);
+        valuePhone.value = `+${c[0].callingCodes[0]}`;
+    });
+});
+
+// login and signup toggle
 const loginBox = document.querySelector('.login');
 const signupBox = document.querySelector('.sign-up');
 
 const loginToggleBtn = document.querySelector('.btn-login');
 const signupToggleBtn = document.querySelector('.btn-signup');
+const signupToggleText = document.querySelector('.text-signup');
 
 const toggleBtnFunc = function (btn1, btn2, box1, box2) {
     btn1.classList.remove('btn-secondary');
@@ -26,6 +56,10 @@ loginToggleBtn.addEventListener('click', function () {
 });
 
 signupToggleBtn.addEventListener('click', function () {
+    toggleBtnFunc(signupToggleBtn, loginToggleBtn, signupBox, loginBox);
+});
+
+signupToggleText.addEventListener('click', function () {
     toggleBtnFunc(signupToggleBtn, loginToggleBtn, signupBox, loginBox);
 });
 
@@ -68,15 +102,15 @@ const stepFunction = function (form1, form2, value1, value2, width, classSelecto
 };
 
 btnNext1.addEventListener('click', function () {
-    stepFunction(form1, form2, -500, 0, 25, '.circle-2');
+    stepFunction(form1, form2, -500, 0, 31, '.circle-2');
 });
 
 btnNext2.addEventListener('click', function () {
-    stepFunction(form2, form3, -500, 0, 50, '.circle-3');
+    stepFunction(form2, form3, -500, 0, 61, '.circle-3');
 });
 
 btnNext3.addEventListener('click', function () {
-    stepFunction(form3, form4, -500, 0, 74, '.circle-4');
+    stepFunction(form3, form4, -500, 0, 91, '.circle-4');
 });
 
 btnPrev2.addEventListener('click', function () {
@@ -84,11 +118,11 @@ btnPrev2.addEventListener('click', function () {
 });
 
 btnPrev3.addEventListener('click', function () {
-    stepFunction(form2, form3, 0, 500, 25, '.circle-3',back=true);
+    stepFunction(form2, form3, 0, 500, 31, '.circle-3',back=true);
 });
 
 btnPrev4.addEventListener('click', function () {
-    stepFunction(form3, form4, 0, 500, 50, '.circle-4',back=true);
+    stepFunction(form3, form4, 0, 500, 61, '.circle-4',back=true);
 });
 
 const navItemList = document.querySelectorAll('.nav-item');

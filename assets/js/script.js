@@ -6,7 +6,6 @@ $(document).ready(function () {
 });
 
 // DOM selection
-
 // activity
 const activityButtons = document.querySelector('.activity-buttons');
 const activityButtonGroup = document.querySelectorAll('.activity-button');
