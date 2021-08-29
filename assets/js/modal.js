@@ -141,7 +141,7 @@ const changeNavFocus = function(element, typeAction){
 }
 navItemList.forEach(function(data){
     changeNavFocus(data,'remove');
-    if(data.dataset.page === window.location.href.split('/')[3].split('.')[0]){
+    if(data.dataset.page === window.location.href.split('/').slice(-1)[0].split('.')[0]){
         const elementActive = document.querySelector(`[data-page="${data.dataset.page}"]`);
         changeNavFocus(elementActive,'add');
     }
