@@ -318,6 +318,18 @@ h3 {
         width:30%;
     }
     
+    .caption-box h3{
+        font-size:100%;
+    }
+    .caption-box .text-highlight{
+        height:6vw;
+    }
+    .caption-box p{
+        font-size:200%;
+    }
+    .svg-icon-banner{
+        width:95%;
+    }
     .fs-text {
         font-size: 8px;
     }
