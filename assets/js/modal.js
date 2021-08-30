@@ -93,9 +93,12 @@ const stepFunction = function (form1, form2, value1, value2, width, classSelecto
     form1.style.transition = '1s';
     form2.style.transition = '1s';
     progressSignup.style.width = `${width}%`;
+    
     if(!back){
-        document.querySelector(classSelector).classList.remove('bg-secondary');
-        document.querySelector(classSelector).classList.add('bg-primary');
+        setTimeout(function(){
+            document.querySelector(classSelector).classList.remove('bg-secondary');
+            document.querySelector(classSelector).classList.add('bg-primary');
+        },1000);
     }else{
         document.querySelector(classSelector).classList.remove('bg-primary');
         document.querySelector(classSelector).classList.add('bg-secondary');
