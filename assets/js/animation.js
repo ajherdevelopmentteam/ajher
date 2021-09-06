@@ -3,11 +3,11 @@ const tween = gsap.timeline();
 tween.fromTo('.caption-title', { x: -600 }, { duration: 2, x: 0, delay: 6 });
 
 // learn more bounce effect
-gsap.fromTo(".learn-more", { y: -600 } ,{duration: 2, y: 0,delay : 6,  ease: "bounce"});
+gsap.fromTo('.learn-more', { y: -600 }, { duration: 2, y: 0, delay: 6, ease: 'bounce' });
 
 // caption full animation
 let typed = new Typed('.text-animation', {
-    strings: ['terhubung dengan rekan sekelas', 'terhubung dengan guru', 'memanajemen proses belajar'],
+    strings: ['connect with classmates', 'connect with teachers', 'learning process management'],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true,
@@ -25,7 +25,6 @@ AOS.init({
     disableMutationObserver: false, // disables automatic mutations' detections (advanced)
     debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
     throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-    
 
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
     offset: 200, // offset (in px) from the original trigger point
@@ -36,4 +35,3 @@ AOS.init({
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
-
