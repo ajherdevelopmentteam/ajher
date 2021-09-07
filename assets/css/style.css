@@ -31,6 +31,9 @@ body {
 .preloading img{
     width:100%;
 }
+.img-width {
+    width: 80%;
+}
 h3 {
     font-size: 2.24vw;
     font-weight: bolder;
