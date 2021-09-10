@@ -42,9 +42,6 @@
 .info {
 	margin-top: 20vw;
 }
-.all {
-	margin-top: 120px;
-}
 
 
 @keyframes tittle-move {
@@ -67,6 +64,8 @@
 @media screen and (max-width: 600px) {
 	.teamwork {
 		padding-right: 8vw;
+		margin-top:20vh;
+		width:80%;
 	}
 	.all{
 		margin-top: 50px;
@@ -74,4 +73,5 @@
 	.allabout{
 		margin-bottom: 10vw;
 	}
+	
 }

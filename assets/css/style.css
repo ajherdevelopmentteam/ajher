@@ -1,11 +1,16 @@
 :root {
-    --brand-color: #00ddf3;
-    --second-brand-color: #1e3069;
-    --second-brand-color-hover : #00196d;
+    --brand-color:#1e3069  ;
+    --brand-color-hover : #00196d;
+    --second-brand-color: #00ddf3;
     --background-color: #f5f7fa;
+    --blue-background-color : #D1E7FF;
 }
 body {
     background-color: var(--background-color);
+}
+
+.myBtn{
+    height:5.5vh;
 }
 
 /* scrollbar */
@@ -20,10 +25,10 @@ body {
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-    background-color: var(--second-brand-color);
+    background-color: var(--brand-color);
 }
 ::-webkit-scrollbar-thumb:hover{
-    background-color: var(--second-brand-color-hover);
+    background-color: var(--brand-color-hover);
 }
 ::-webkit-scrollbar-thumb:horizontal {
     visibility: hidden;
@@ -31,8 +36,11 @@ body {
 .preloading img{
     width:100%;
 }
+.preloading .progress-bar, .preloading .progress{
+    height:1vh;
+}
 .img-width {
-    width: 80%;
+    width: 70%;
 }
 h3 {
     font-size: 2.24vw;
@@ -52,7 +60,50 @@ h3 {
 }
 #home {
     padding-top: 2.5rem;
+    background-color: var(--blue-background-color);
 }
+
+/* arrow bottom */
+.arrow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.arrow:hover{
+    cursor:pointer;
+}
+.arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #06A8FF;
+    border-right: 5px solid #06A8FF;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
+/*  */
 
 .text-garis {
     border-bottom: 2px solid var(--brand-color);
@@ -86,24 +137,12 @@ h3 {
 }
 .text-animation {
     font-weight: bolder;
-    color: var(--second-brand-color);
+    color: var(--brand-color);
 }
 /* activity */
-.activity-buttons {
-    display: flex;
-    justify-content: space-between;
+#activity-container{
+    background-color: var(--blue-background-color);
 }
-.activity-button-active {
-    margin-bottom: 2vh;
-}
-.activity-content {
-    height: 30vh;
-}
-.activity-content-text {
-    background-color: #fff;
-    padding: 1rem;
-}
-
 /* cards */
 .card {
     background: #fff;
@@ -127,7 +166,7 @@ h3 {
 
 /* footer */
 .footer-top {
-    background-color: var(--second-brand-color);
+    background-color: var(--brand-color);
     color: #fff;
 }
 .uk-text {
@@ -151,13 +190,43 @@ h3 {
     width: 100%;
     height: 100%;
 }
+
+/* scroll-up btn */
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: var(--brand-color);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 999999999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
 /* Modal */
 
 .modal-body {
     overflow: hidden;
 }
 .text-active{
-    color: var(--second-brand-color);
+    color: var(--brand-color);
     cursor:pointer;
 }
 .login, .sign-up {
@@ -219,12 +288,22 @@ h3 {
     padding-left: 10%;
 }
 .btn-active {
-    background-color: var(--second-brand-color);
+    background-color: var(--brand-color);
     color: #fff;
 }
 .btn-active:hover{
-    background-color: var(--second-brand-color-hover);
+    background-color: var(--brand-color-hover);
     color: #fff;
+}
+.second-btn-active{
+    background-color: none;
+    color : var(--brand-color);
+    border:1px solid var(--brand-color);
+}
+.second-btn-active:hover{
+    background-color: var(--brand-color);
+    color:#fff;
+    cursor:pointer;
 }
 .bg-muted {
     background-color: #c4c4c4;
@@ -327,7 +406,9 @@ h3 {
     .preloading img{
         width:30%;
     }
-    
+    #home{
+        height:100vh;
+    }
     .caption-box h3{
         font-size:100%;
     }

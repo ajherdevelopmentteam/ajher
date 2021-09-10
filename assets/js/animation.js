@@ -1,17 +1,17 @@
 // Caption title animation
 const tween = gsap.timeline();
-tween.fromTo('.caption-title', { x: -600 }, { duration: 2, x: 0, delay: 6 });
+tween.fromTo('.caption-title', { x: -600 }, { duration: 2, x: 0, delay: 2 });
 
 // learn more bounce effect
-gsap.fromTo('.learn-more', { y: -600 }, { duration: 2, y: 0, delay: 6, ease: 'bounce' });
+gsap.fromTo('.learn-more', { y: -600 }, { duration: 2, y: 0, delay: 2, ease: 'bounce' });
 
 // caption full animation
 let typed = new Typed('.text-animation', {
-    strings: ['connect with classmates', 'connect with teachers', 'learning process management'],
+    strings: ['connect with classmates', 'connect with teachers', 'manage learning process'],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true,
-    startDelay: 6000,
+    startDelay: 2000,
 });
 
 // Animation on scroll
